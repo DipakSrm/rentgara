@@ -5,6 +5,6 @@ import { Inter } from "next/font/google";
 
 export default function Home() {
   return (
-    <p>THis is dipak branch</p>
+    <h1>Hellpo everyone this is jus an exmaplke of dipak</h1>
   );
 }
