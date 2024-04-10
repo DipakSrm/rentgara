@@ -1,9 +1,12 @@
-import Image from "next/image";
 
-
+import Layout from "@/components/Layout";
 
 export default function Home() {
   return (
-<h1>Hellpo everyone this is jus an exmaplke of dipak</h1>
-  );
-}
+
+    <Layout>
+
+      This is just layout
+    </Layout>
+
+)}
