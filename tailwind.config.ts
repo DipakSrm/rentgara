@@ -8,10 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontSize: {
+        sm: "0.875rem", // Small font size
+        base: "1rem", // Default font size
+        lg: "1.125rem", // Large font size
+        xl: "1.25rem", // Extra large font size
+      },
+      colors: {
+        primary: "#fffff", // Example primary color
+        secondary: "f4f4f4", // Example secondary color
       },
     },
   },

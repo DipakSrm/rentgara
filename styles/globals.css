@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,807;1,807&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.custom_underline {
+  position: relative; /* Ensure positioning context for the pseudo-element */
+}
+
+.custom_underline::after {
+  position: absolute; /* Position the pseudo-element relative to its parent */
+  width: 100%;
+  content: ""; /* Required for pseudo-elements */
+  display: block; /* Ensures the pseudo-element takes up space */
+  border-bottom: 0.3rem solid #f4f4f4; /* Adjust color, thickness, and style as needed */
+  bottom: 0; /* Position the underline at the bottom of the parent element */
+}
+.primary_font_family {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 807;
+  font-style: normal;
+}
+.secondary_font_family {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
