@@ -16,7 +16,11 @@ const config: Config = {
       },
       colors: {
         primary: "#fffff", // Example primary color
-        secondary: "f4f4f4", // Example secondary color
+        secondary: "#f4f4f4", // Example secondary color
+      },
+      backgroundColor: {
+        primary: "var(--color-primary)",
+        secondary: "#f4f4f4", // Use secondary color as background
       },
     },
   },

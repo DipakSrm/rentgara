@@ -26,3 +26,9 @@
   font-weight: 300;
   font-style: normal;
 }
+.outer-box {
+  border: 1px solid black;
+}
+#search_box_home::placeholder {
+  color: f4f4f4;
+}

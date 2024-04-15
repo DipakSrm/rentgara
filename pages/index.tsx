@@ -1,10 +1,10 @@
 
 import Layout from "@/components/Layout";
-
-export default function Home() {
+import Home from "@/components/Home";
+export default function Index() {
   return (
     <Layout>
-      This is just layout
+      <Home />
     </Layout>
-)
+  )
 }
