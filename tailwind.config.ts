@@ -1,3 +1,7 @@
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -6,6 +10,7 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       fontSize: {
@@ -24,6 +29,18 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [addVariablesForColors],
 };
 export default config;
+
+//this is for adding variables for colors
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}

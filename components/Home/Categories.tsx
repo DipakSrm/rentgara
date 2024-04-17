@@ -44,7 +44,7 @@ export default function Categories() {
 
                             <p className="">{i.Title}</p>
                             <div className="max-h-full">
-                                <Image src={i.url} alt={"this is " + `${i.Title}` + "Image"} height={100} width={100} />
+                                <Image src={i.url} alt={"this is " + `${i.Title}` + "Image"} height={100} width={100} style={{ height: "auto", width: "auto" }} />
                             </div>
 
                         </div>
