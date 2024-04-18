@@ -32,3 +32,22 @@
 #search_box_home::placeholder {
   color: f4f4f4;
 }
+.badge {
+  display: inline-block;
+  padding: 0.5rem;
+  font-size: 0.5rem;
+  background-color: #ffff; /* Badge background color */
+  color: black; /* Text color */
+  font-weight: bold;
+  border-radius: 50%;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px blue; /* Initial glow color and size */
+  }
+  to {
+    box-shadow: 0 0 20px blue; /* Final glow color and size */
+  }
+}
