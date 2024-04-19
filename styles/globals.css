@@ -59,7 +59,6 @@
 }
 /* style for add to cart in home trending section*/
 .hover_over {
-  display: block;
-
-  transition: ease-in-out;
+  transform: translateY(-5%);
+  transition: "transform 0.3s ease-in-out";
 }
