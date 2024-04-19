@@ -19,15 +19,16 @@ export default function Trending_Card({ id,
     address,
     ratings }: details_props
 ) {
-    const [Hovered, setHovered] = useState(false);
-    console.log(Hovered)
+
+
     return (
         <>
-            <div className="w-full grid grid-rows-3">
-                <div className="row-span-2 flex justify-center items-center relative">
+            <div
+                className="w-full grid grid-rows-3  hover:translate-y-[-5%] transition-transform duration-300 ease-in-out"
+
+            >
+                <div className="row-span-2 flex justify-center items-center relative hover:cursor-pointer ">
                     <Image src={veh_img} alt="this is image" height={100} width={100} />
-                    <div className="absolute top-0 left-0 w-full h-full bg-white opacity-0 hover:opacity-50 transition-opacity duration-300" onMouseEnter={() => setHovered(!Hovered)}></div>
-                    <button className={`primary_font_family absolute px-4 py-2 outer-box bg-black text-white translate-y-[-150%] text-sm ${Hovered ? 'opacity-100 translate-y-0 ease-in-out duration-300' : 'opacity-0 hidden'} z-10`}>Add to Cart</button>
                 </div>
 
                 <div className="bg-secondary p-2 flex flex-col gap-2 row-span-1">
