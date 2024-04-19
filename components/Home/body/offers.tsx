@@ -41,7 +41,7 @@ export default function Offers({ deadline }: OffersProps) {
         }
     }, [Time]);
 
-    const getTime = (remainingTime: number): string => {
+    const getTime = (remainingTime: number): any => {
         let seconds = Math.floor(remainingTime / 1000);
         let minutes = Math.floor(seconds / 60);
         let hours = Math.floor(minutes / 60);
@@ -50,7 +50,14 @@ export default function Offers({ deadline }: OffersProps) {
         const final_minutes = minutes % 60;
         const final_hours = hours % 24;
 
-        return `${days}: ${final_hours} : ${final_minutes} : ${final_second}`;
+        return (
+            <>
+                <div className="timer_style primary_font_family text-xl">{days}</div><span className="text-white primary_font_family">:</span>
+                <div className="timer_style primary_font_family text-xl">{final_hours}</div><span className="text-white primary_font_family">:</span>
+                <div className="timer_style primary_font_family text-xl">{final_minutes}</div><span className="text-white primary_font_family">:</span>
+                <div className="timer_style primary_font_family text-xl">{final_second}</div>
+            </>
+        );
     };
 
     return (
@@ -67,7 +74,14 @@ export default function Offers({ deadline }: OffersProps) {
                         )
                     })}
                 </div>
-                {Time === 0 ? `Offer Expired` : getTime(Time)}
+                <div className="flex justify-center items-center gap-2 flex-col bg-black p-4">
+                    <h1 className="text-xl primary_font_family text-white">Limited Time Offer</h1>
+                    <p className="text-sm secondary_font_family text-white">Ends Soon</p>
+                    <div className=" flex justify-center items-center p-4 gap-2">
+                        {Time === 0 ? <p className="text-red-400 primary_font_family bg-white p-4">Offer Expired!!</p> : getTime(Time)}
+                    </div>
+                </div>
+
 
             </section>
         </>

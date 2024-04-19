@@ -51,3 +51,15 @@
     box-shadow: 0 0 20px blue; /* Final glow color and size */
   }
 }
+.timer_style {
+  padding: 0.5rem;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+/* style for add to cart in home trending section*/
+.hover_over {
+  display: block;
+
+  transition: ease-in-out;
+}
