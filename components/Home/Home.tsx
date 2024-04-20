@@ -32,14 +32,7 @@ export default function Home() {
                         </h1>
                         <TypewriterEffectSmooth words={words} />
                     </div>
-                    <div className="flex gap-4">
 
-                        <div className="flex justify-evenly relative items-center">
-                            <input type="text" placeholder="What car you looking for.." className=" text-black font-light outer-box py-3 px-[5rem] " id="search_box_home" />
-                            <FontAwesomeIcon className="w-[2rem] absolute right-[5%] " icon={faSearch} />
-                        </div>
-                        <button className=" outer-box py-3 px-8 bg-secondary font-bold text-lg hover:bg-black hover:text-secondary">Search</button>
-                    </div>
                 </div>
                 <div className="col-span-1 w-full ">
                     <Image src={Truck} alt="Truck Image" height={1000} width={1000} />
