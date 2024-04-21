@@ -28,8 +28,8 @@ export default function Header() {
                         <Link href="#" className="p-4 hover:text-gray-500">ContactUs</Link>
                         <Link href="#" className="p-4 hover:text-gray-500">Profile</Link>
                     </div>
-
-                    <div className={`absolute translate-y-[70%] p-4 flex    flex-col gap-1 lg:hidden md:hidden transition-all duration-300 ease-in-out  ${show ? "translate-x-0 " : "translate-x-[-100%] "}`}>
+                    {/**For small devices */}
+                    <div className={`absolute translate-y-[60%] flex bg-white z-10 w-[100vw] h-[40vh] pl-[3rem] flex-col gap-1 lg:hidden md:hidden transition-all duration-300 ease-in-out  ${show ? "translate-x-[-10%] " : "translate-x-[-150%] "}`}>
                         <Link href="#" className="hover:text-gray-500 ">Explore</Link>
                         <Link href="#" className="text-yellow-500 font-bold hover:text-yellow-700 ">SignUp as Owner</Link>
                         <Link href="#" className="hover:text-gray-500 ">ContactUs</Link>

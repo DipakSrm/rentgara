@@ -5,8 +5,8 @@ import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import Link from "next/link";
 export default function Footer() {
     return (
-        <footer className="flex justify-between p-4 items-center w-full min-h-[100vh]">
-            <div className="flex items-center gap-4">
+        <footer className="flex justify-between p-4 items-center w-full min-h-[100vh] flex-wrap">
+            <div className="flex items-center gap-4 flex-wrap">
 
                 <Image
                     src={Logo}
