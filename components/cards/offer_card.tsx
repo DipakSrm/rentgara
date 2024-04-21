@@ -12,7 +12,7 @@ export default function Offer_Card({ id,
     Sub_Title,
     Offer_Des,
     img_url }: Offer_Data_Props) {
-    console.log(id, Title, Sub_Title, Offer_Des, img_url)
+
     return (
         <>
             <div className="bg-secondary p-4 flex flex-col gap-2 justify-center items-center">
