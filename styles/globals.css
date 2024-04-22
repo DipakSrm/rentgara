@@ -65,3 +65,33 @@
 .remove_border {
   border: none;
 }
+@media screen and (max-width: 423px) {
+  .max-width-423 {
+    max-height: 50%;
+  }
+  .rows_10 {
+    display: grid;
+    grid-template-rows: repeat(8, auto);
+    gap: 0.3rem;
+    place-content: center;
+    place-items: center;
+    padding: 1rem;
+  }
+  .width_423_span_1 {
+    grid-row: span 1;
+    padding: 1.5rem;
+  }
+  .width_423_span_2 {
+    grid-row: span 2;
+    padding: 0.3rem 0.5rem;
+  }
+  .padding_423px {
+    padding: 0.3rem 0.5rem;
+  }
+  .search_423px {
+    width: full;
+    padding: 2rem5rem;
+    span {
+    }
+  }
+}
