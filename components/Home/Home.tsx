@@ -79,11 +79,11 @@ export default function Home() {
                     </h1>
                     <TypewriterEffectSmooth
                         words={[
-                            { text: 'Select' },
-                            { text: 'Vehicle,' },
-                            { text: 'Address,' },
-                            { text: 'date' },
-                            { text: 'and time..', className: 'text-blue-500 dark:text-blue-500' },
+                            { text: 'Best' },
+                            { text: 'vehicle,' },
+                            { text: 'service ,' },
+                            { text: 'available' },
+                            { text: 'in  Nepal..', className: 'text-red-500 dark:text-red-500' },
                         ]}
                     />
                 </div>
