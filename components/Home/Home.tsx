@@ -73,7 +73,7 @@ export default function Home() {
     return (
         <>
             <section id="home" className="grid lg:grid-cols-3 md:grid-cols-3 lg:grid-rows-3 md:grid-rows-3 grid-cols-3  w-[90%] h-auto lg:h-[90vh] place-items-center items-center gap-4 mx-auto">
-                <div className=" lg:col-span-2 md:col-span-2 md:row-span-1 lg:row-span-1 col-span-3 flex flex-col lg:mt-[10rem] md:mt-[10rem] mt-[4rem]">
+                <div className=" lg:col-span-2 md:col-span-2 md:row-span-1 lg:row-span-1 col-span-3 flex flex-col lg:mt-[10rem] md:mt-[10rem] mt-[4rem] ">
                     <h1 className='lg:text-4xl md:text-2xl text-2xl primary_font_family '>
                         Explore top quality rental cars for your journey
                     </h1>
@@ -92,25 +92,28 @@ export default function Home() {
                 </div>
 
 
-                <div className=" grid lg:grid-cols-11 gap-4 grid-cols-2 lg:grid-rows-1 md:grid-rows-4 row-span-2 col-span-3 grid-rows-5  w-full  bg-secondary rounded-lg shadow-lg py-[4rem] px-[1rem] mt-4 ">
-                    <div className="lg:col-span-2  w-full flex items-center gap-2 p-1 border bg-gray-500 shadow rounded-md md:col-span-1 col-span-2 row-span-1">
+                <div className=" grid lg:grid-cols-10 gap-4 grid-cols-2 lg:grid-rows-3 lg:h-auto lg:gap-1 md:grid-rows-4 row-span-2 col-span-3 grid-rows-5  w-full rows_10  bg-secondary rounded-lg shadow-lg py-[4rem] px-[1rem] mt-4 lg:mt-[3rem]">
+                    <h1 className='col-span-3 row-span-1 lg:col-span-10 lg:row-span-1  primary_font_family text-2xl text-blue-400 text-center'>
+                        Start your Journey
+                    </h1>
+                    <div className="lg:col-span-2  w-full flex items-center gap-2 p-1 border bg-gray-500 shadow width_423_span_1 rounded-md md:col-span-1 col-span-2 row-span-1 max-width-423">
                         <div className=" mx-auto">
                             <FontAwesomeIcon icon={faLocation} className=' text-white w-[2rem] lg:w-[1rem] xl:w-[1rem] h-auto' />
                         </div>
-                        <input className=" p-4 w-[70%] mx-auto rounded-md" placeholder="Location" />
+                        <input className=" p-4 w-[70%] mx-auto rounded-md padding_423px" placeholder="Location" />
                     </div>
-                    <div className="lg:col-span-2  w-full flex items-center  gap-2 p-1 border bg-gray-500 shadow rounded-md md:col-span-1 col-span-2 row-span-1">
+                    <div className="lg:col-span-2  w-full flex items-center gap-2 p-1 border bg-gray-500 shadow width_423_span_1 rounded-md md:col-span-1 col-span-2 row-span-1 max-width-423">
                         <div className="mx-auto ">
-                            <FontAwesomeIcon icon={faTruck} className='p-2 lg:w-[1rem] xl:w-[1rem] w-[2rem] h-auto text-white' />
+                            <FontAwesomeIcon icon={faTruck} className=' text-white w-[2rem] lg:w-[1rem] xl:w-[1rem] h-auto' />
                         </div>
-                        <input className=" p-4 w-[70%] mx-auto rounded-md" placeholder="Vehicle" />
+                        <input className=" p-4 w-[70%] mx-auto rounded-md padding_423px" placeholder="Vehicle" />
                     </div>
                     {/* this section is for chossing starting date of reservation */}
-                    <div className="lg:col-span-3 w-full flex border items-center gap-2 mx-auto bg-gray-500 shadow rounded-md col-span-2 row-span-1 flex-wrap">
+                    <div className="lg:col-span-3 w-full flex border items-center gap-2 mx-auto bg-gray-500 shadow rounded-md col-span-2 row-span-1 width_423_span_2">
                         <div className=' flex items-center gap-2 justify-center'>
                             {!control1.dateOpen && date1.justdate ? (
                                 <div className=" ">
-                                    <FontAwesomeIcon className='p-4 w-[2rem] h-auto text-white' icon={faCalendarDays} onClick={() => setControl1(prevState => ({ ...prevState, dateOpen: true }))} />
+                                    <FontAwesomeIcon className='p-4 w-[2rem] h-auto text-blue-200' icon={faCalendarDays} onClick={() => setControl1(prevState => ({ ...prevState, dateOpen: true }))} />
                                 </div>
                             ) : (
                                 <div className=" z-10  ">
@@ -129,9 +132,9 @@ export default function Home() {
                             )}
 
                             {date1.justdate ? (
-                                <div className=" lg:text-sm md:text-[0.5rem] text-white font-semibold">{formatDate(date1.justdate)}</div>
+                                <div className=" lg:text-sm md:text-[1rem] text-white font-semibold">{formatDate(date1.justdate)}</div>
                             ) : (
-                                <div className={`md:text-[0.5rem]  text-white font-semibold lg:text-sm ${control1.dateOpen ? 'hidden' : 'block'}`}>mm/dd/year</div>
+                                <div className={`md:text-[1rem]  text-white font-semibold lg:text-sm ${control1.dateOpen ? 'hidden' : 'block'}`}>mm/dd/year</div>
                             )}
                         </div>
                         {/* time of booking */}
@@ -152,11 +155,11 @@ export default function Home() {
                         </div>
                     </div>
                     {/* this section is for chossing returning date of reservation */}
-                    <div className="lg:col-span-3 w-full flex border items-center gap-2 mx-auto bg-gray-500 shadow rounded-md col-span-2 row-span-1 flex-wrap">
+                    <div className="lg:col-span-3 w-full flex border items-center gap-2 mx-auto bg-gray-500 shadow rounded-md col-span-2 row-span-1   width_423_span_2">
                         <div className=' flex items-center gap-2 justify-center '>
                             {!control2.dateOpen && date2.justdate ? (
                                 <div className=" ">
-                                    <FontAwesomeIcon className='p-4  w-[2rem] h-auto text-white' icon={faCalendarDays} onClick={() => setControl2(prevState => ({ ...prevState, dateOpen: true }))} />
+                                    <FontAwesomeIcon className='p-4  w-[2rem] h-auto text-blue-200' icon={faCalendarDays} onClick={() => setControl2(prevState => ({ ...prevState, dateOpen: true }))} />
                                 </div>
                             ) : (
                                 <div className=" z-10  ">
@@ -166,7 +169,7 @@ export default function Home() {
                                             setControl2(prev => ({ ...prev, dateOpen: false }));
                                         }}
                                         value={date2.justdate}
-                                        minDate={new Date()}
+                                        minDate={date1.justdate ? date1.justdate : new Date()}
                                         view="month"
                                         className={`shadow-lg  rounded-md px-8 py-4 font-bold absolute `}
 
@@ -175,7 +178,7 @@ export default function Home() {
                             )}
 
                             {date2.justdate ? (
-                                <div className=" lg:text-sm md:text-[0.5rem] text-white font-semibold">{formatDate(date2.justdate)}</div>
+                                <div className=" lg:text-sm md:text-[1rem] text-white font-semibold">{formatDate(date2.justdate)}</div>
                             ) : (
                                 <div className={`md:text-[0.5rem] text-white font-semibold  lg:text-sm ${control2.dateOpen ? 'hidden' : 'block'}`}>mm/dd/year</div>
                             )}
@@ -197,8 +200,8 @@ export default function Home() {
 
                         </div>
                     </div>
-                    <button className="lg:col-span-1 col-span-3 row-span-1 h-[70%] lg:px-[1rem] lg:h-[50%] my-auto bg-blue-400 hover:bg-blue-600 lg:w-full md:w-[90%] mx-auto flex justify-center items-center shadow-lg lg:gap-1 gap-4 rounded-md py-4 px-4">
-                        <span className='lg:text-[0.8rem] text-[2rem]  text-white font-bold'>Search</span>
+                    <button className="lg:col-span-3 width_423_span_1 search_423px max-width-423 col-span-3 row-span-1  lg:px-[1rem] lg:h-[50%] my-auto bg-blue-400 hover:bg-blue-600 lg:w-full md:w-[90%] mx-auto flex justify-center items-center shadow-lg lg:gap-1 gap-4 rounded-md py-4  px-4">
+                        <span className='lg:text-[1rem] text-[2rem]  text-white font-bold lg:p-[1rem]'>Search</span>
                         <FontAwesomeIcon icon={faMagnifyingGlass} className='text-white  lg:w-4  w-8 h-auto' />
                     </button>
 
