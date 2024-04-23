@@ -91,7 +91,8 @@
   .search_423px {
     width: full;
     padding: 2rem5rem;
-    span {
-    }
+  }
+  .text_for_423 {
+    font-size: 1.5rem;
   }
 }

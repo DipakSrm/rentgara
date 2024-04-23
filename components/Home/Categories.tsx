@@ -34,22 +34,24 @@ export default function Categories() {
     ]
     return (
         <>
-            <h1 className="text-center primary_font_family my-8 text-xl">
-                Vehicles Catagories
-            </h1>
-            <div className="grid lg:grid-cols-6 w-[90%] mx-auto  items-center gap-6 md:grid-cols-2 sm:grid-cols-1 ">
-                {data.map((i) => {
-                    return (
-                        <div key={i.Title} className="flex justify-center items-center gap-4 flex-col px-4 py-8 bg-secondary shadow">
+            <div className="my-[10%]">
+                <h1 className="text-center primary_font_family my-8 text-xl">
+                    Vehicles Catagories
+                </h1>
+                <div className="grid lg:grid-cols-6 w-[90%] mx-auto  items-center gap-6 md:grid-cols-2 sm:grid-cols-1 ">
+                    {data.map((i) => {
+                        return (
+                            <div key={i.Title} className="flex justify-center items-center gap-4 flex-col px-4 py-8 bg-secondary shadow">
 
-                            <p className="">{i.Title}</p>
-                            <div className="max-h-full">
-                                <Image src={i.url} alt={"this is " + `${i.Title}` + "Image"} height={100} width={100} style={{ height: "auto", width: "auto" }} />
+                                <p className="">{i.Title}</p>
+                                <div className="max-h-full">
+                                    <Image src={i.url} alt={"this is " + `${i.Title}` + "Image"} height={100} width={100} style={{ height: "auto", width: "auto" }} />
+                                </div>
+
                             </div>
-
-                        </div>
-                    )
-                })}
+                        )
+                    })}
+                </div>
             </div>
         </>
     )
