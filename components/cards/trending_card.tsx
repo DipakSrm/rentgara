@@ -32,15 +32,15 @@ export default function Trending_Card({ id,
                 </div>
 
                 <div className="bg-secondary p-2 flex flex-col gap-2 row-span-1">
-                    <div className="flex justify-between items-center primary_font_family">
-                        <h1 className="primary_font_family lg:text-sm md:text-sm ">{vehicle}</h1>
-                        <div className="flex justify-start items-center gap-2">
+                    <div className="grid grid-rows-2 grid-cols-2  items-start primary_font_family">
+                        <h1 className="primary_font_family lg:text-sm md:text-sm row-span-2 col-span-1">{vehicle}</h1>
+                        <div className="flex justify-start items-center gap-2 row-span-1 col-span-1">
                             <FontAwesomeIcon icon={faStar} className="text-yellow-400 w-4" />
                             <span>{ratings}</span>
                         </div>
                     </div>
-                    <div className="flex justify-between flex-wrap">
-                        <div className="flex items-center justify-start gap-2">
+                    <div className="grid  grid-rows-3">
+                        <div className="flex items-center row-span-2 gap-2">
                             <Image
                                 src={profile}
                                 alt="this is image"
@@ -51,7 +51,7 @@ export default function Trending_Card({ id,
                             />
                             <span className="secondary_font_family">{name}</span>
                         </div>
-                        <div className="flex items-center justify-start gap-2">
+                        <div className="flex items-center justify-start gap-2 row-span-1 pt-2">
                             <FontAwesomeIcon icon={faLocation} />
                             <span className="secondary_font_family">{address}</span>
                         </div>
