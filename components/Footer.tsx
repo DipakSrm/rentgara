@@ -5,8 +5,8 @@ import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 import Link from "next/link";
 export default function Footer() {
     return (
-        <footer className="flex justify-between p-4 items-center w-full min-h-[100vh] flex-wrap">
-            <div className="flex items-center gap-4 flex-wrap">
+        <footer className="flex justify-between p-4 items-center w-full h-auto mt-[100vh] flex-wrap bg-gray-500 ">
+            <div className="flex items-center gap-4 flex-wrap text-white">
 
                 <Image
                     src={Logo}
@@ -18,12 +18,16 @@ export default function Footer() {
 
                 />
 
-                <FontAwesomeIcon className="w-5" icon={faFacebook} />
-                <Link href="#">Facebook</Link>
-                <FontAwesomeIcon className="w-5" icon={faInstagram} />
-                <Link href="#">Instagram</Link>
+                <div>
+                    <FontAwesomeIcon className="w-5" icon={faFacebook} />
+                    <Link href="#">Facebook</Link>
+                </div>
+                <div>
+                    <FontAwesomeIcon className="w-5" icon={faInstagram} />
+                    <Link href="#">Instagram</Link>
+                </div>
             </div>
-            <div className="text-lg">
+            <div className="text-lg p-4 text-white">
                 <p>Copyright © 2024 RentGara. All rights reserved.</p>
 
             </div>

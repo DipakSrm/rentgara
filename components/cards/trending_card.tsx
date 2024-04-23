@@ -39,7 +39,7 @@ export default function Trending_Card({ id,
                             <span>{ratings}</span>
                         </div>
                     </div>
-                    <div className="flex justify-between">
+                    <div className="flex justify-between flex-wrap">
                         <div className="flex items-center justify-start gap-2">
                             <Image
                                 src={profile}

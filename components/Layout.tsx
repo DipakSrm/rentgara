@@ -4,10 +4,10 @@ import Footer from '@/components/Footer';
 
 export default function Layout({ children }: any) {
     return (
-        <>
-            <Header />
+        <div > <Header />
             {children}
-            <Footer />
-        </>
+            <Footer /></div>
+
+
     );
 }
