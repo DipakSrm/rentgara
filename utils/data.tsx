@@ -4,6 +4,12 @@ interface locationData_props {
 interface vehicleData_props {
     name: string
 }
+interface featureData_props {
+    name: string
+}
+interface manufacturer_props {
+    name: string
+}
 export const locationData: locationData_props[] = [
     {
         name: "Urlabari"
@@ -49,4 +55,35 @@ export const vehicleData: vehicleData_props[] = [
     {
         name: "Tripper"
     },
+]
+export const featureData: featureData_props[] = [
+    {
+        name: "Air Condition"
+    },
+    {
+
+        name: "Music System"
+    },
+
+]
+export const manufacturer: manufacturer_props[] = [
+    {
+        name: "Tata"
+    },
+    {
+        name: "Maruti"
+    },
+    {
+        name: "Suzuki"
+    },
+    {
+        name: "BYD"
+    },
+    {
+        name: "Hyundai"
+    },
+    {
+        name: "Datsun"
+    },
+
 ]
