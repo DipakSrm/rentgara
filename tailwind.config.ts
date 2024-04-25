@@ -28,6 +28,9 @@ const config: Config = {
         primary: "var(--color-primary)",
         secondary: "#f4f4f4", // Use secondary color as background
       },
+      screens: {
+        base: { max: "423px" }, // Custom base breakpoint with max-width 423px
+      },
     },
   },
   plugins: [addVariablesForColors, require("flowbite/plugin")],

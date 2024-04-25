@@ -26,7 +26,7 @@ export default function Header() {
 
     return (
         <div className={`fixed z-[100] bg-white top-0 transition-all ease-in-out duration-300 ${isScrolled ? 'left-0 w-full' : 'left-[5%] w-[90%]'}`}>
-            <div className={`flex      max-h-[15vh] p-4 font-base mx-auto overflow-hidden items-center justify-between secondary_font_family ${!show ? "custom_underline" : ""}`}>
+            <div className={`flex      max-h-[15vh] p-4 font-base mx-auto overflow-hidden items-center justify-between secondary_font_family  ${!show ? "custom_underline" : ""}`}>
                 <div className="grid items-center gap-2 grid-cols-5 ">
                     <div className="lg:col-span-1 md:col-span-1 col-span-3 ">
                         <Image
@@ -39,14 +39,14 @@ export default function Header() {
                         />
                     </div>
                     <div className={`col-span-4 row-span-1 lg:block md:block hidden `}>
-                        <Link href="#" className="p-4 hover:text-gray-500">Explore</Link>
+                        <Link href="/explore" className="p-4 hover:text-gray-500">Explore</Link>
                         <Link href="#" className="p-4 text-yellow-500 font-bold hover:text-yellow-700">SignUp as Owner</Link>
                         <Link href="#" className="p-4 hover:text-gray-500">ContactUs</Link>
                         <Link href="#" className="p-4 hover:text-gray-500">Profile</Link>
                     </div>
                     {/**For small devices */}
                     <div className={`absolute translate-y-[60%] flex bg-white z-10 w-[100vw] h-[40vh] pl-[3rem] flex-col gap-1 lg:hidden md:hidden transition-transform duration-900 ease-in-out  ${show ? "translate-x-[-10%] " : "translate-x-[-150%] "}`}>
-                        <Link href="#" className="hover:text-gray-500 ">Explore</Link>
+                        <Link href="explore" className="hover:text-gray-500 ">Explore</Link>
                         <Link href="#" className="text-yellow-500 font-bold hover:text-yellow-700 ">SignUp as Owner</Link>
                         <Link href="#" className="hover:text-gray-500 ">ContactUs</Link>
                         <Link href="#" className="hover:text-gray-500 ">Profile</Link>

@@ -6,6 +6,7 @@ import { faCalendarDays, faClock, faLocation, faMagnifyingGlass, faTruck } from 
 import { TypewriterEffectSmooth } from '../ui/typewriter_effect';
 import backgroundImage from "@/public/back1.jpg"
 import Calendar from 'react-calendar';
+import { locationData, vehicleData } from '@/utils/data';
 import 'react-calendar/dist/Calendar.css';
 
 interface DateProps {
@@ -38,6 +39,12 @@ export default function Home() {
         dateOpen: false,
         timeOpen: false,
     });
+    const [location, setlocation] = useState('')
+    const getlocation = (e: any) => {
+        const selected = e.target.value;
+        setlocation(selected)
+    }
+    console.log("this is location", location)
     const formatDate = (date: Date | null): string => {
         if (!date) return ''; // Return empty string if date is null
         const formattedDate = date.toLocaleDateString('en-US', {
@@ -65,12 +72,7 @@ export default function Home() {
             }
         ))
     }
-    console.log("this is the selected time", date1.datetime)
-    console.log("this is the selected time2", date2.datetime)
-    console.log("this is just date", control1.dateOpen)
-    console.log("this is the date", date1.justdate)
-    console.log("this is just date2", control2.dateOpen)
-    console.log("this is the date2", date2.justdate)
+
     return (
         <>
             <section id="home" className="grid lg:grid-cols-3  relative my-[1rem]  md:grid-cols-3 lg:grid-rows-3 md:grid-rows-3 grid-cols-3 w-[100%] mt-[15vh] h-auto lg:h-[90vh] place-items-center items-center gap-4 mx-auto">
@@ -104,13 +106,27 @@ export default function Home() {
                         <div className=" mx-auto">
                             <FontAwesomeIcon icon={faLocation} className=' text-white w-[2rem] lg:w-[1rem] xl:w-[1rem] h-auto' />
                         </div>
-                        <input className=" p-4 w-[70%] mx-auto rounded-md padding_423px" placeholder="Location" />
+                        <input className="p-4 w-[70%] mx-auto rounded-md padding_423px" placeholder="Location" list="location" onChange={getlocation} />
+                        <datalist id="location">
+                            {locationData.map((item) => {
+                                return (
+                                    <option value={item.name} key={item.name} />
+                                )
+                            })}
+                        </datalist>
                     </div>
                     <div className="lg:col-span-2  w-full flex items-center gap-2 p-1 border bg-gray-500 shadow width_423_span_1 rounded-md md:col-span-1 col-span-2 row-span-1 max-width-423">
                         <div className="mx-auto ">
                             <FontAwesomeIcon icon={faTruck} className=' text-white w-[2rem] lg:w-[1rem] xl:w-[1rem] h-auto' />
                         </div>
-                        <input className=" p-4 w-[70%] mx-auto rounded-md padding_423px" placeholder="Vehicle" />
+                        <input className="p-4 w-[70%] mx-auto rounded-md padding_423px" placeholder="Vehicle" list="vehicle" onChange={getlocation} />
+                        <datalist id="vehicle">
+                            {vehicleData.map((item) => {
+                                return (
+                                    <option value={item.name} key={item.name} />
+                                )
+                            })}
+                        </datalist>
                     </div>
                     {/* this section is for chossing starting date of reservation */}
                     <div className="lg:col-span-3 w-full flex border items-center gap-2 mx-auto bg-gray-500 shadow rounded-md col-span-2 row-span-1 width_423_span_2 ">
